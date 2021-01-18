@@ -1,0 +1,20 @@
+
+[{
+		"city": "Москва",
+		"phone": "8-800-200-600",
+		"email": "info_msk@shop.ru",
+		"address": "2я Тверская ул."
+	},
+	{
+		"city": "Новосибирск",
+		"phone": "50-200-60",
+		"email": "info_nvsk@shop.ru",
+		"address": "Академиков ул."
+	},
+	{
+		"city": "Khabarovsk",
+		"phone": "4212-00-20",
+		"email": "info_khv@shop.ru",
+		"address": "st. Lenina"
+	}
+]

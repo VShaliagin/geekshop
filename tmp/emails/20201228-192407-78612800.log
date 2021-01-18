@@ -1,0 +1,15 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHRlc3R1c2Vy?=
+From: webmaster@localhost
+To: testuser@user.com
+Date: Mon, 28 Dec 2020 09:24:07 -0000
+Message-ID: 
+ <160914744742.15704.10272390056850903033@DESKTOP-J6DN8PH.mshome.net>
+
+Для подтверждения учетной записи testuser на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/testuser@user.com/21c1d2bfba4be2175821a5c2718173d32541f035/
+-------------------------------------------------------------------------------

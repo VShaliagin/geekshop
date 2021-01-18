@@ -1,0 +1,92 @@
+[
+  {
+    "category": "дом",
+    "name": "комфорт 1",
+    "image": "products_images/home_chair_1.jpg",
+    "short_desc": "стул обыкновенный",
+    "description": "подойдет для кухни",
+    "price": "4989.5",
+    "quantity": "10"
+  },
+  {
+    "category": "дом",
+    "name": "комфорт 2",
+    "image": "products_images/home_chair_2.jpg",
+    "short_desc": "очень комфортный стул",
+    "description": "подойдет для общения с друзьями",
+    "price": "5687.2",
+    "quantity": "5"
+  },
+  {
+    "category": "дом",
+    "name": "люкс",
+    "image": "products_images/home_chair_3.jpg",
+    "short_desc": "стул из экокожи",
+    "description": "идеальное мытье",
+    "price": "8157.99",
+    "quantity": "7"
+  },
+  {
+    "category": "офис",
+    "name": "стандарт",
+    "image": "products_images/office_chair_1.jpg",
+    "short_desc": "универсальное решение",
+    "description": "подойдет для любого офиса",
+    "price": "1895.25",
+    "quantity": "15"
+  },
+  {
+    "category": "офис",
+    "name": "премиум",
+    "image": "products_images/office_chair_2.jpg",
+    "short_desc": "улучшенный дизайн",
+    "description": "идеально впишется в интерьер офиса",
+    "price": "3587.41",
+    "quantity": "9"
+  },
+  {
+    "category": "модерн",
+    "name": "новинка",
+    "image": "products_images/modern_chair_1.jpg",
+    "short_desc": "инновационный дизайн",
+    "description": "нестандартное решение для интерьера",
+    "price": "15361.47",
+    "quantity": "8"
+  },
+  {
+    "category": "модерн",
+    "name": "прогресс",
+    "image": "products_images/modern_chair_2.jpg",
+    "short_desc": "прогрессивный дизайн",
+    "description": "функциональное и комфортное решение",
+    "price": "26789.33",
+    "quantity": "6"
+  },
+  {
+    "category": "классика",
+    "name": "венеция",
+    "image": "products_images/classic_chair_1.jpg",
+    "short_desc": "классические формы",
+    "description": "окунитесь в европейский комфорт",
+    "price": "4147.51",
+    "quantity": "14"
+  },
+  {
+    "category": "классика",
+    "name": "тоскана",
+    "image": "products_images/classic_chair_2.jpg",
+    "short_desc": "эргономичная спинка",
+    "description": "почувствуйте комфорт и насладитесь цветовой гаммой",
+    "price": "3147.35",
+    "quantity": "8"
+  },
+  {
+    "category": "классика",
+    "name": "рим",
+    "image": "products_images/classic_chair_3.jpg",
+    "short_desc": "удачные пропорции",
+    "description": "простота конструкции",
+    "price": "1357.77",
+    "quantity": "32"
+  }
+]
