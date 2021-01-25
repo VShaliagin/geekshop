@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'ordersapp',
     'debug_toolbar',
     'template_profiler_panel',
+    'django_extensions',
 
 ]
 
@@ -61,14 +62,15 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 if DEBUG:
-   def show_toolbar(request):
-       return True
+    def show_toolbar(request):
+        return True
 
-   DEBUG_TOOLBAR_CONFIG = {
+    DEBUG_TOOLBAR_CONFIG = {
        'SHOW_TOOLBAR_CALLBACK': show_toolbar,
    }
 
-   DEBUG_TOOLBAR_PANELS = [
+
+    DEBUG_TOOLBAR_PANELS = [
        'debug_toolbar.panels.versions.VersionsPanel',
        'debug_toolbar.panels.timer.TimerPanel',
        'debug_toolbar.panels.settings.SettingsPanel',
@@ -84,6 +86,7 @@ if DEBUG:
        'debug_toolbar.panels.profiling.ProfilingPanel',
        'template_profiler_panel.panels.template.TemplateProfilerPanel',
    ]
+
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ROOT_URLCONF = 'geekshop.urls'
@@ -174,9 +177,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    BASE_DIR, "static",
-)
+#STATICFILES_DIRS = (
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    # BASE_DIR, "static",
+#)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
