@@ -38,6 +38,16 @@ def main(request):
                }
     return render(request, 'mainapp/index.html', content)
 
+def get_category(pk):
+    if settings.LOW_CACHE:
+        key = f'category_{pk}'
+        category = cache.get(key)
+        if category is None:
+            category = get_object_or_404(ProductCategory, pk=pk)
+            cache.set(key, category)
+        return category
+    else:
+        return get_object_or_404(ProductCategory, pk)
 
 def products(request, pk=None, page=1):
     title = 'продукты'
@@ -48,7 +58,7 @@ def products(request, pk=None, page=1):
             category = {'name': 'все', 'pk': 0}
             products = Product.objects.filter(is_active=True).order_by('price')
         else:
-            category = get_object_or_404(ProductCategory, pk=pk)
+            category = get_category(pk)
             products = Product.objects.filter(category__pk=pk).order_by('price')
 
         paginator = Paginator(products, 2)
