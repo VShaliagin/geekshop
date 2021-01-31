@@ -4,6 +4,8 @@ from django.conf import settings
 from django.core.cache import cache
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.cache import cache_page
+
 from basketapp.models import Basket
 from .models import Product, ProductCategory
 
@@ -49,6 +51,7 @@ def get_category(pk):
     else:
         return get_object_or_404(ProductCategory, pk)
 
+@cache_page(3600)
 def products(request, pk=None, page=1):
     title = 'продукты'
     # links_menu = ProductCategory.objects.filter(is_active=True)
