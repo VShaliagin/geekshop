@@ -7,6 +7,7 @@ from mainapp.models import ProductCategory, Product
 class TestMainappSmoke(TestCase):
 
     def setUp(self):
+        call_command('flush', '--noinput')
         test_category = ProductCategory.objects.create(name='Test')
         Product.objects.create(
             category=test_category,
