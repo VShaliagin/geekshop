@@ -20,7 +20,7 @@ class TEstAuthUsserCase(TestCase):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.context['user'].is_anonymous)
-        # self.assertNotContains(response, 'Пользователь', status_code=200)
+        self.assertNotContains(response, 'Пользователь', status_code=200)
 
         self.client.login(username='django', password='geekbrains')
 
@@ -41,6 +41,10 @@ class TEstAuthUsserCase(TestCase):
         response = self.client.get('/authapp/logout/')
         self.assertEqual(response.status_code, 302)
 
+    def test_basket_user_login_redirect(self):
+        response = self.client.get('/basket/')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url, 'authapp/login/?next=/basket/')
 
     def tearDown(self):
         call_command('sqlsequencereset', 'mainapp', 'authapp', 'ordersapp', 'basketapp')
