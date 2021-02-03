@@ -10,6 +10,19 @@ class ShopUserAdminEditForm(ShopUserEditForm):
         fields = '__all__'
 
 class ProductCategoryEditForm(forms.ModelForm):
+    discount = forms.IntegerField(label='discont', required=False, min_value=0, max_value=90, initial=0)
+
+    class Meta:
+        model=ProductCategory
+        exclude = ()
+
+    def __init__(self, *args, **kwargs):
+        super(ProductCategoryEditForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+            field.help_text = ''
+
+class ProductCategoryEditForm(forms.ModelForm):
     class Meta:
         model = ProductCategory
         fields = '__all__'

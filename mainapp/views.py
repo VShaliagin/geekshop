@@ -3,6 +3,7 @@ import os, random, json
 from django.conf import settings
 from django.core.cache import cache
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.cache import cache_page
 
@@ -63,7 +64,7 @@ def products(request, pk=None, page=1):
         else:
             category = get_category(pk)
             products = Product.objects.filter(category__pk=pk).order_by('price')
-
+             # products = Product.objects.filter(Q(category__pk=1) | Q(category__pk=2))
         paginator = Paginator(products, 2)
         try:
             products_paginator = paginator.page(page)
