@@ -5,7 +5,7 @@ from authapp.models import ShopUser
 from mainapp.models import ProductCategory, Product
 
 
-class TEstAuthUsserCase(TestCase):
+class TestAuthUserCase(TestCase):
 
     def setUp(self):
         call_command('flush', '--noinput')
