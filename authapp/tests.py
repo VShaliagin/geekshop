@@ -11,7 +11,7 @@ class TEstAuthUsserCase(TestCase):
         call_command('flush', '--noinput')
         self.client = Client()
 
-        self.user = ShopUser.objects.create_superuser('django', 'django@gd.local', 'geekbrains')
+        self.superuser = ShopUser.objects.create_superuser('django', 'django@gd.local', 'geekbrains')
 
         self.user = ShopUser.objects.create_user('test2', 'test2@gd.local', 'geekbrains')
         self.user_with_fn = ShopUser.objects.create_user('test2', 'test2@gd.local', 'geekbrains', first_name='Test2')
