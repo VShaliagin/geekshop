@@ -44,7 +44,7 @@ class TestAuthUserCase(TestCase):
     def test_basket_user_login_redirect(self):
         response = self.client.get('/basket/')
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response.url, 'authapp/login/?next=/basket/')
+        self.assertEqual(response.url, 'auth/login/?next=/basket/')
 
         self.client.login(username='django', password='geekbrains')
         #
