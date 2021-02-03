@@ -31,11 +31,11 @@ class TestMainappSmoke(TestCase):
     def test_products_pages(self):
         for category in ProductCategory.objects.all():
             response = self.client.get(f'/products/category/{category.pk}')
-            self.asserEqual(response.status_code, 200)
+            self.assertEqual(response.status_code, 200)
 
         for product in Product.objects.all():
             response = self.client.get(f'/products/product/{product.pk}')
-            self.asserEqual(response.status_code, 200)
+            self.assertEqual(response.status_code, 200)
 
     def tearDown(self):
         call_command('sqlsequencereset', 'mainapp', 'authapp', 'ordersapp', 'basketapp')
