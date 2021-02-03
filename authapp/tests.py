@@ -46,5 +46,14 @@ class TestAuthUserCase(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, 'authapp/login/?next=/basket/')
 
+        self.client.login(username='django', password='geekbrains')
+        #
+        #
+        # response = self.client.get('/authapp/login/')
+        #
+        response = self.client.get('/basket/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.request['PATH_INFO'], '/basket/')
+
     def tearDown(self):
         call_command('sqlsequencereset', 'mainapp', 'authapp', 'ordersapp', 'basketapp')
