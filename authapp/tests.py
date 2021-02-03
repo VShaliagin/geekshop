@@ -40,7 +40,7 @@ class TEstAuthUsserCase(TestCase):
 
         response = self.client.get('/authapp/logout/')
         self.assertEqual(response.status_code, 302)
-        self.assertTrue(response.context['user'].is_anonymous)
+
 
     def tearDown(self):
         call_command('sqlsequencereset', 'mainapp', 'authapp', 'ordersapp', 'basketapp')
